@@ -33,7 +33,7 @@ class ChangePasswordType extends AbstractType
             ])
             ->add('old_password', PasswordType::class, [
                 'label' => 'mon mot de passe actuel',
-                'mapped'=>false,
+                'mapped' => false,
                 'attr' => [
                     'placeholder' => 'Veuillez saisir votre mot de passe actuel.'
                 ]
@@ -57,10 +57,9 @@ class ChangePasswordType extends AbstractType
                     ]
                 ]
             ])
-            ->add('submit', SubmitType::class,[
-                'label'=>'Mettre à jour'
-            ])
-            ;
+            ->add('submit', SubmitType::class, [
+                'label' => 'Mettre à jour'
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
