@@ -14,7 +14,7 @@
 
 		<!-- Bootstrap core CSS -->
 		<link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-		<link rel="stylesheet" href="{{ asset('assets/css/boutiquefrançaise.css')}}">
+		<link href="{{ asset('assets/css/boutiquefrançaise.css')}}" rel="stylesheet">
 
 		<style>
 			.bd-placeholder-img {
@@ -45,7 +45,7 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Nos produits
+							<a class="nav-link" href="{{ path('products')}}">Nos produits
 							</a>
 						</li>
 						<li class="nav-item active">
@@ -69,6 +69,9 @@
 							<a href="{{path('register')}}">Inscription</a>
 						{% endif %}
 					</div>
+					<a href="{{ path('cart') }}">
+					<img src="{{asset('assets/image/shopping-cart.png')}}"  class="cart-icon" alt="mon panier">
+					</a>
 				</div>
 			</nav>
 		</header>
@@ -137,8 +140,8 @@
 
 			<div class="container marketing {% if block('carousel') is not defined %}mt-5{% endif %}"> {% block content %}{% endblock %}
 
-				<hr
-				class="featurette-divider">
+				
+			<!--	<class="featurette-divider"> -->
 
 			<!-- /END THE FEATURETTES -->
 
